@@ -1,0 +1,437 @@
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body{
+    font-family: "Red Hat Display";
+}
+h1{
+    font-weight: 500;
+}
+.card{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.mar-left{
+    margin-left: 8rem;
+}
+
+.border-wrapper {
+    display: inline-block;
+    padding: 2px; /* Space for stylized border */
+    position: relative;
+    transition: transform 0.3s ease;
+    overflow: visible;
+}
+
+.border {
+    position: relative;
+    border-radius: 100px;
+    padding: 4rem;
+    background-color: white; /* Ensure white background is always visible */
+    cursor: pointer;
+    z-index: 2; /* Keep the white background above the pseudo-elements */
+}
+
+.border-wrapper:hover {
+    transform: scale(1.1); /* Scale on hover */
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.border-wrapper::after, .border-wrapper::before{
+    content:"";
+    position:absolute;
+    border-radius: 100px;
+    height:100%;
+    width:100%;
+    top:50%;
+    left:50%;
+    translate:-50%-50%;
+    z-index:-1;
+    padding:1px;
+    background-image: conic-gradient(from var(--angle),#ff0d19,#fca219,#fce912,#8bfc12,#12fcd9,#1239fc,#6012fc,#d512fc,#ff0d19);
+    animation: 3s spin linear infinite;
+    opacity: 0; /* Hide initially */
+    transition: opacity 0.3s ease;
+}
+
+.border-wrapper:hover::after,
+.border-wrapper:hover::before {
+    opacity: 1; /* Show on hover */
+    
+}
+
+.border-wrapper::before{
+    filter:blur(3rem);
+    opacity:0.4;
+}
+
+@keyframes spin {
+    from{
+        --angle:0deg;
+    }
+    to{
+        --angle:360deg;
+    }
+}
+
+.icon{
+    width:300px;
+}
+
+
+h2{
+    text-align: center;
+}
+
+.control{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size:20px;
+}
+
+
+
+.jogging-container{
+    padding:0px;
+    margin:auto;
+    width:400px;
+    line-height: 40px;
+}
+
+.pp-container{
+    padding:50px;
+    width:800px;
+    margin:auto;
+    line-height: 40px;
+}
+
+footer{
+    background: linear-gradient(to left, #00b7ff,#347cc4);
+    background-size: cover;
+    padding:5px;
+}
+
+html, body{
+    margin:0px;
+    padding:0px;
+}
+
+/* Video background container */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+}
+
+/* Video settings */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+}
+
+/* Content inside the video section */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+}
+
+.link{
+    text-decoration: none;
+    color:rgb(203, 202, 202);
+    transition-duration: 0.3s;
+}
+.link:hover{
+    color:white;
+    
+}
+
+.nav-bar{
+    width:85%;
+    position: absolute;
+    top:5%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.pp-mar-left{
+    margin-left: 1rem;
+}
+
+.pp-mar-left2{
+    margin-left: 67rem;
+}
+
+.rule{
+    width:1450px;
+    position:absolute;
+    color:white;
+    border-style: solid;
+    top:7%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1 {
+    font-size: 4rem; /* Large heading */
+}
+
+.button {
+    padding: 15px 50px;
+    font-size: 1rem;
+    margin-top: 15px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    position: relative; /* Needed for positioning the arrow */
+    overflow: hidden; /* To contain the pseudo-elements */
+    transition-duration: 0.5s;
+}
+
+.button:hover {
+    background-color: rgb(0, 68, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
+.hide{
+    display:none;
+}
+
+.axis-input{
+    width:100px;
+    border:none;
+
+}
+
+.bg{
+    background: linear-gradient(to left,hsl(0, 3%, 83%), hsl(193, 100%, 65%));
+}
+
+#jogging{
+    padding:40px;
+    height:85vh;
+}
+
+#pick-place{
+    padding:40px;
+    height:85vh;
+}
+
+.side-btn{
+    background-color: #1239fc;
+    color:white;
+    border:none;
+    width:45px;
+    height: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.side-btn:hover{
+    background-color: #0221c1;
+}
+
+.axis-input{
+    width:100px;
+    height:30px;
+    border-radius: 15px;
+    padding:8px;
+    text-align: center;
+}
+
+.pp-width{
+    width:100px;
+}
+
+.head-color{
+    color:#505050;
+    font-weight:bold;
+
+}
+
+.pp-layout{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.pp-button{
+    height:60px;
+    width:150px;
+    font-size: 1.4rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    transition-duration: 0.5s;
+}
+
+.pp-button:hover {
+    background-color: rgb(0, 68, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
+.home-btn{
+    position: absolute;
+    top:250%;
+    left:70%;
+    height:60px;
+    width:150px;
+    font-size: 1.4rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    transition-duration: 0.5s;
+}
+
+.home-btn:hover {
+    background-color: rgb(0, 68, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
+.load{
+    margin-top:10px;
+    margin-left:36.8rem;
+    width:495px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.load-btn{
+    height:60px;
+    width:145px;
+    font-size: 1.4rem;
+    background: linear-gradient(to right,hsl(201, 71%, 43%), hsl(6, 84%, 63%));
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    transition-duration: 0.5s;
+}
+
+.load-btn:hover {
+    background-color: rgb(0, 68, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
+.dialog_box1{
+    width:150px;
+    position:relative;
+    top:-45%;
+    left:4%;
+}
+.dialog_box2{
+    width:150px;
+    position:relative;
+    top:-60%;
+    left:4%;
+}
+
+.dialog_input1{
+    width:100px;
+    height:30px;
+    border-radius: 15px;
+    padding:8px;
+    text-align: center;
+}
+
+.dialog_input2{
+    width:100px;
+    height:30px;
+    border-radius: 15px;
+    padding:8px;
+    text-align: center;
+}
+
+.bit_logo_jogging{
+    width:18vh;
+    position:absolute;
+    top:214%;
+    left:89%;
+}
+
+.bit_logo_pick{
+    width:18vh;
+    position:absolute;
+    top:319%;
+    left:89%;
+}
+
+.run_button{
+    position:absolute;
+    top:370%;
+    left:84%;
+    height:60px;
+    width:150px;
+    font-size: 1.4rem;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    transition-duration: 0.5s;
+}
+
+.run_button:hover{
+    background-color: rgb(0, 68, 255);
+    color: white;
+    transform: scale(1.1);
+}
+
+.title_bg{
+    height:40px;
+    width:800px;
+    margin-bottom: 15px;
+    margin-left: 15rem;
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Red Hat Display";
+    transition-duration: 0.5s;
+}
+
+.title_bg:hover{
+    background-color: rgba(0, 1, 3, 0.616);
+    color: white;
+}

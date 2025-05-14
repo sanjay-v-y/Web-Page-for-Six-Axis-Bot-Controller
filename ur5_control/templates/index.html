@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <!--Font import-->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">    
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <title>Six Axis Controller</title>
+    <link rel="icon" href="assets/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <section class="video-background">
+        <video autoplay loop muted src="assets/robot_vid.mp4" width="500" id="bg-video">
+            <source src="assets/robot.mp4">
+        </video>
+    </section>
+
+    <nav class="nav-bar">
+        <!-- <a href="#jogging" class="link pp-mar-left2"> JOGGING</a>
+        <a href="#pick-place" class="link pp-mar-left">PICK & PLACE</a> -->
+        <button class="title_bg">
+            <a href="https://www.bitsathy.ac.in/" target ="_blank" style="text-decoration: none;color:white;">Bannari Amman Institute of Technology - AI Based Industrial Automation</a>
+        </button>
+    </nav>
+
+    <hr class="rule">
+
+    <section class="content">
+        <h1 class="h1">SIX AXIS CONTROLLER</h1>
+        <p style="font-size: 1.5rem;">Control your bot using Web!</p>
+        <a href="#choice">
+            <button class="button">
+                Start Controlling
+            </button>
+        </a>
+        
+        
+    </section>
+
+
+    <section class="card" id="choice">
+        <a href="#jogging">
+            <div class="border-wrapper">
+                <div class="border-content">
+                    <div class="border">
+                        <img src="assets/jogging.png" alt="Jogging" class="icon">
+                        <h2>Jogging</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+    
+        <a href="#pick-place">
+            <div class="border-wrapper mar-left">
+                <div class="border-content">
+                    <div class="border">
+                        <img class="icon" src="assets/pick&place.png" alt="Pick & Place">
+                        <h2>Pick & Place</h2>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+       
+
+    <br><br><br><br><br>
+    <div class="bg">
+        <section id="jogging">
+            <h1 class="head-color">JOGGING</h1>
+            <button class="home-btn">Home Pos</button>
+            
+            <div class="jogging-container">
+                <div class="control">
+                    <p>Joint 1</p>
+                    <div>
+                        <button class="side-btn" data-jogging="x-axis" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="0.0000" data-jogging="x-axis">
+                        <button class="side-btn" data-jogging="x-axis" data-increment="1">+</button>
+                    </div>
+                </div>
+                <div class="control">
+                    <p>Joint 2</p>
+                    <div>
+                        <button class="side-btn" data-jogging="y-axis" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="-2.3911" data-jogging="y-axis">
+                        <button class="side-btn" data-jogging="y-axis" data-increment="1">+</button>
+                    </div>
+                </div>
+                <div class="control">
+                    <p>Joint 3</p>
+                    <div>
+                        <button class="side-btn" data-jogging="z-axis" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="2.40855" data-jogging="z-axis">
+                        <button class="side-btn" data-jogging="z-axis" data-increment="1">+</button>
+                    </div>
+                </div>
+                <div class="control">
+                    <p>Joint 4</p>
+                    <div>
+                        <button class="side-btn" data-jogging="pitch" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="-3.14159" data-jogging="pitch">
+                        <button class="side-btn" data-jogging="pitch" data-increment="1">+</button>
+                    </div>
+                </div>
+                <div class="control">
+                    <p>Joint 5</p>
+                    <div>
+                        <button class="side-btn" data-jogging="roll" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="-1.5882" data-jogging="roll">
+                        <button class="side-btn" data-jogging="roll" data-increment="1">+</button>
+                    </div>
+                </div>
+                <div class="control">
+                    <p>Joint 6</p>
+                    <div>
+                        <button class="side-btn" data-jogging="yaw" data-increment="-1">-</button>
+                        <input type="number" class="axis-input" value="3.14159" data-jogging="yaw">
+                        <button class="side-btn" data-jogging="yaw" data-increment="1">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog_box1">
+                <input type="number" class="dialog_input1" value="0.25">
+                <p style="margin-left: 15px; font-weight: bold;">Step value</p>
+            </div>
+            <img src="./assets/logo.png" alt="bit_logo" class="bit_logo_jogging">
+        </section>        
+    <br><br><br>
+
+    <hr style="color: aliceblue;border: solid;">
+
+    <section id="pick-place">
+
+        <div class="pp-layout">
+            <h1 class="head-color">PICK & PLACE</h1>
+        </div>
+
+        <button class="run_button">Run</button>
+
+        <div class="load">
+            <button class="load-btn">Load1</button>
+            <button class="load-btn">Load2</button>
+        </div>
+
+        <div class="pp-container">
+            <div class="control">
+                <p class="pp-width"></pclass>Joint 1</p>
+                <div>
+                        <button class="side-btn">-</button>
+                        <input type="number" class="axis-input" value="0">
+                        <button class="side-btn">+</button>
+                </div>
+                <div>
+                        <button class="side-btn">-</button>
+                        <input type="number" class="axis-input" value="0">
+                        <button class="side-btn">+</button>
+                </div>
+            </div>
+            <div class="control">
+                <p class="pp-width">Joint 2</p>
+                <div>
+                        <button class="side-btn">-</button>
+                        <input type="number" class="axis-input" value="0">
+                        <button class="side-btn">+</button>
+                </div>
+                <div>
+                        <button class="side-btn">-</button>
+                        <input type="number" class="axis-input" value="0">
+                        <button class="side-btn">+</button>
+                </div>
+            </div>
+            <div class="control">
+                <p class="pp-width">Joint 3</p>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+            </div>
+
+            <div class="control">
+                <p class="pp-width">Joint 4</p>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+            </div>
+
+            <div class="control">
+                <p class="pp-width">Joint 5</p>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+            </div>
+            <div class="control">
+                <p class="pp-width">Joint 6</p>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+                <div>
+                    <button class="side-btn">-</button>
+                    <input type="number" class="axis-input" value="0">
+                    <button class="side-btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_box2">
+            <input type="number" class="dialog_input2" value="0.25">
+            <p style="margin-left: 15px; font-weight: bold;">Step value</p>
+        </div>
+
+        <img src="./assets/logo.png" alt="bit_logo" class="bit_logo_pick">
+        
+    </section>
+    <br><br><br>
+    </div>
+
+    <footer>
+        <p style="text-align: center; color: aliceblue;">Six Axis Controller</p>
+        <hr style="color: aliceblue;">
+        <a href="index.html" style="color: aliceblue; display:flex; justify-content: center;">Back to Home</a>
+    </footer>
+</body>
+</html>
