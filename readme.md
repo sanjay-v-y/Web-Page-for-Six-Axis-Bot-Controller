@@ -57,12 +57,10 @@ This platform streamlines **robot control**, eliminates the need for bulky hardw
 
 ## 👨‍💻 Author
 
-**Sanjay** – Frontend Developer  
-
+**Sanjay** – Frontend Developer<br>
 JavaScript • Problem Solving • UI/UX Design
 
 **Ravi Varma** – Backend Developer  
-
 ROS • Robotics Integration 
 
 
